@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>513th Frog Battalion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+        Custom CSS for the 513th Frog Battalion Website
+        This section overrides or enhances Tailwind's defaults for specific elements
+        to create a unique theme.
+        */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Styling for the main header section */
+        .main-header {
+            /* --- Background image styles added here --- */
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg'); /* Replace with your actual image URL */
+            background-size: cover; /* Ensures the image covers the entire header area */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-color: #f7f7f7; /* Fallback background color if image fails to load */
+            /* --- End background image styles --- */
+
+            color: #ffffff; /* Changed to white for better visibility against a potentially dark background image */
+            padding: 2.5rem 0; /* More vertical padding */
+            text-align: center;
+            border-bottom-left-radius: 15px; /* Rounded corners for the bottom */
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+        /* Changes for gradient text */
+        .site-title {
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,  /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,  /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+            font-size: 2.5rem; /* Larger title on desktop */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .white-text-black-border {
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,  /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,  /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+        }
+
+        @media (min-width: 768px) {
+            .site-title {
+                font-size: 3.5rem; /* Even larger on bigger screens */
+            }
+        }
+
+        .site-slogan {
+            font-size: 1.1rem;
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,  /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,  /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+        }
+
+        /* Styling for the details (accordion) block */
+        .wp-block-details {
+            background-color: #ffffff; /* White background for readability */
+            border: 1px solid #d4edda; /* Subtle light green border */
+            padding: 1.5rem; /* Ample padding */
+            margin-bottom: 2rem; /* Space below the block */
+            border-radius: 10px; /* Nicely rounded corners */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More pronounced shadow */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wp-block-details:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .wp-block-details summary {
+            font-weight: 700; /* Bolder summary text */
+            color: #000000; /* Sea green for summary */
+            cursor: pointer;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted #ccc; /* Dotted separator */
+            line-height: 1.4; /* Improve line spacing in summary */
+        }
+
+        .wp-block-details p {
+            color: #000000; /* Slightly darker text for content */
+            margin-top: 1rem; /* Space paragraphs within details */
+        }
+
+        /* Styling for the "Check us out!" heading */
+        .cta-heading {
+            color: #000000; /* Dark frog green */
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Styling for the buttons */
+        .cta-button {
+            background: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
+            color: rgb(255, 255, 255);
+            padding: 0.75rem 1.75rem; /* Generous padding for good tap targets */
+            border-radius: 8px; /* Rounded button corners */
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease; /* Changed to 'background' */
+            font-weight: 500;
+            display: inline-flex; /* Use flex for potential icon/text alignment */
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent; /* Placeholder for hover effect */
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to a darker red on the right */
+            transform: translateY(-2px); /* Subtle lift effect */
+            border-color: #000000; /* Darker green border on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow on hover */
+        }
+
+        /* Footer styling */
+        .main-footer {
+            background-color: #000000; /* Darker, more grounded color */
+            color: #ecf0f1; /* Light text for contrast */
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem; /* Space above the footer */
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        /* New class for a white background section */
+        .white-background-section {
+            background-color: white; /* Sets the background to white */
+        }
+    </style>
+</head>
+<body class="selection:bg-green-200 selection:text-green-800">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <header class="main-header rounded-xl mb-12">
+            <h1 class="site-title">513th Frog Battalion</h1>
+            <p class="site-slogan">Leap into Victory</p>
+        </header>
+
+        <!-- New section for quick access buttons -->
+        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="cta-button w-32 h-12">Home</a>
+                <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
+                <a href="event.html" class="cta-button w-32 h-12">Events</a>
+            </div>
+        </div>
+
+        <main>
+            <details class="wp-block-details">
+                <summary>
+                    🐸 Welcome to the 513th Frog Battalion<br>
+                    <strong>Join the frontlines of chaos, coordination, and amphibious domination.</strong><br>
+                    <p>The 513th Frog Battalion isn't just another War Thunder squadron—we're a community of tactical thinkers, competitive players, and meme-loving warriors who take teamwork seriously... but not ourselves</p>
+                    <p>Whether you're a squadron battle grinder, event enthusiast, or just someone looking for a reliable crew, you’ve just found your unit.</p>
+                </summary>
+
+                    <h2>🔥 What We Do: Events & Squadron Battles</h2>
+                    <h3>Squadron Battles (SQB)</h3>
+                    <p>Join our competitive teams for ranked battles with real coordination, clear comms, and big rewards. We focus on teamwork to climb the ranks and secure those valuable rewards.</p>
+                    <h3>Community Events & Chaos Nights</h3>
+                    <p>Because frogs need fun too. Dive into custom battles, cinematic missions, and meme-fueled madness. These are perfect for unwinding and enjoying War Thunder with the squad.</p>
+                    <h3>Active Discord Hub</h3>
+                    <p>Strategy, banter, clips, comms, and coordination. It's where the swamp really comes to life for all our events and battle planning.</p>
+                    <h3>Check Out Our Shop</h3>
+                    <p>Rep the Battalion with exclusive merch. — frog-flavored, battle-approved. (Work in progress)</p>
+                    <h3>Follow Us on Social Media</h3>
+                    <p>See mission highlights, get event updates, and enjoy the best memes from the swamp. Don’t miss a hop — we're active on [insert platforms, e.g., TikTok, YouTube, etc.].</p>
+
+                    <h2>🫡 Why Join the 513th?</h2>
+                    <h3>Supportive for all skill levels</h3>
+                    <p>Learn the ropes or lead your own ops in a friendly and engaging environment.</p>
+                    <h3>Organized and active</h3>
+                    <p>Weekly sessions, fast response, and dependable leadership for consistent gameplay.</p>
+                    <h3>Flexible & fun</h3>
+                    <p>Show up for what you enjoy, no pressure to participate in everything.</p>
+
+                    <h2>🎖️ Ready to Enlist?</h2>
+                    <p><strong>Join our Discord</strong> and hop into a competitive session or community event. Whether you’re seeking structured battles or just want a squad that has your six, **the 513th is ready for you.**</p>
+                    <p>🐸 **513th Frog Battalion – Leap into Victory**</p>
+            </details>
+            <details class="wp-block-details">
+                <summary>
+                    Welcome to F13 Norrköping<br>
+                    <strong>>Sweden's Premier War Thunder Milsim Unit.</strong><br>
+                    <strong>F13 Norrköping</strong> is a dedicated War Thunder squadron for milsim enthusiasts, focusing on realistic tactics, structured operations, and immersive gameplay experiences.</p>
+                    <p>If you're looking for serious coordination, authentic military simulation, and a tight-knit English community, you’ve just found your operational base.</p>
+                </summary>
+
+                    <h2>🔥 What We Do: Milsim for Sweden F13 Norrköping</h2>
+                    <p>Precision maneuvers. Combined arms. Real milsim flavor with just enough flexibility to stay fun and engaging within a Swedish context.</p>
+                    <h3>Milsim Events</h3>
+                    <p>Structured operations with chain-of-command, briefing rooms, and realistic tactics, often drawing inspiration from Swedish military doctrines. From convoy ambushes to base assaults, it’s the closest you’ll get to military ops in War Thunder.</p>
+                    <h3>Active Discord Hub</h3>
+                    <p>Our Discord is the command center for all milsim planning, strategy discussions, comms, and coordination. It’s where our Swedish operations are meticulously planned and executed.</p>
+
+                    <h2>🫡 Why Join F13 Norrköping?</h2>
+                    <h3>Authentic Milsim Experience</h3>
+                    <p>We value realism and structured gameplay for a truly immersive experience.</p>
+                    <h3>Dedicated English Community</h3>
+                    <p>Connect with fellow players who share a passion for military simulation.</p>
+                    <h3>Organized and Active Ops</h3>
+                    <p>Regularly planned operations with clear objectives and dependable leadership.</p>
+
+                    <h2>🎖️ Ready to Enlist with F13 Norrköping?</h2>
+                    <p><strong>Join our Discord</strong> and participate in an upcoming milsim op. If you're seeking highly structured, realistic gameplay with a Swedish focus, **F13 Norrköping is ready for you.**</p>
+                    <p>**F13 Norrköping – För Sverige i War Thunder**</p>
+            </details>
+
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+                    <h2 class="cta-heading text-3xl font-bold mb-6">Check us out!</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.tiktok.com/@513thfrogbattalion">
+                    <img src="frog_tiktok.jpg" alt="frog_tiktok.jpg" class="w-32 h-32 mx-auto mt-4 rounded-lg">
+                    </a>
+
+                    <a href="https://www.youtube.com/@513thFrogs">
+                    <img src="frog_youtube.jpg" alt="frog_youtube" class="w-32 h-32 mx-auto mt-4 rounded-lg">
+                    </a>
+                </div>
+            </div>   
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+                <h2 class="cta-heading text-3xl font-bold mb-6">Help us grow! Money goes to events at 513th.</h2>
+                <div class="flex flex-col items-center gap-4"> <a href="https://www.paypal.com/donate/?hosted_button_id=UE95NU5CNT8MG" class="cta-button w-32 h-16">Donate (Paypal)</a>
+                <img src="QR-kod.png" alt="QR Code for 513th Frog Battalion Discord" class="w-32 h-32 mx-auto mt-4 rounded-lg">
+            </div>
+        </div>
+        </main>
+        <div class="flex flex-col md:flex-row justify-center items-start gap-8 mb-12">
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center w-full md:w-1/2 max-w-lg">
+                <h1 class="text-black text-3xl font-bold mb-6">513th Frog Battalion</h1>
+                <iframe class="w-full" src="https://discord.com/widget?id=1196158088642822205&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center w-full md:w-1/2 max-w-lg">
+                <h1 class="text-black text-3xl font-bold mb-6">F13 Norrköping (Milsim)</h1>
+                <iframe class="w-full" src="https://discord.com/widget?id=938361386797498378&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+        <footer class="main-footer rounded-xl">
+            <p>© 2025 513th Frog Battalion. All rights reserved.</p>
+        </footer>
+
+    </div> </body>
+</html>

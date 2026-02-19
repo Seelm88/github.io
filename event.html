@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>513th Frog Battalion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f7f7f7;
+            color: #ffffff;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .site-title {
+            color: white;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .white-text-black-border {
+            color: white;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+        }
+
+        @media (min-width: 768px) {
+            .site-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .site-slogan {
+            font-size: 1.1rem;
+            color: white;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+        }
+
+        .wp-block-details {
+            background-color: #ffffff;
+            border: 1px solid #d4edda;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wp-block-details:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .wp-block-details summary {
+            font-weight: 700;
+            color: #000000;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted #ccc;
+            line-height: 1.4;
+        }
+
+        .wp-block-details p {
+            color: #000000;
+            margin-top: 1rem;
+        }
+
+        .cta-heading {
+            color: #000000;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, black, red);
+            color: rgb(255, 255, 255);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20));
+            transform: translateY(-2px);
+            border-color: #000000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .main-footer {
+            background-color: #000000;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .white-background-section {
+            background-color: white;
+        }
+
+        /* Iframe centering and sizing styles */
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto; /* Center the container itself */
+            padding: 0 1rem; /* Add some horizontal padding */
+            max-width: 60%; /* Ensure it doesn't overflow */
+            overflow-x: auto; /* Add horizontal scroll if iframe content is too wide */
+        }
+
+        .iframe-container iframe {
+            width: 40%; /* This will now be 100% of the *new* outer iframe container */
+            min-width: 600px; /* Example: A suitable minimum width for the spreadsheet */
+            height: 1000px; /* Keep height as is, or adjust as needed */
+            border: none;
+        }
+
+        /* Adjust min-width for larger screens if needed */
+        @media (min-width: 1000px) { /* Example breakpoint for larger screens */
+            .iframe-container iframe {
+                min-width: 1200px; /* Make it even wider on large screens */
+            }
+        }
+        @media (min-width: 1400px) { /* Example breakpoint for very large screens */
+            .iframe-container iframe {
+                min-width: 1500px; /* Adjust as needed for your content */
+            }
+        }
+
+    </style>
+</head>
+<body class="selection:bg-green-200 selection:text-green-800">
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="main-header rounded-xl mb-12">
+            <h1 class="site-title">513th Frog Battalion</h1>
+            <p class="site-slogan">Leap into Victory</p>
+        </header>
+
+        <section class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="cta-button w-32 h-12">Home</a>
+                <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
+                <a href="Events.html" class="cta-button w-32 h-12">Events</a>
+            </div>
+        </section>
+    </div>
+
+    <main class="mb-12"> <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8TrQQYtwIcxcLxkS-LLvpQEl0L49tjQuGHc1DPbOykYanpTnlaPNLCjslO1ho1pkElRXBnOxI0YmN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

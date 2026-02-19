@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>513th Frog Battalion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Your existing CSS (no changes needed here for functionality) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .main-header {
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f7f7f7;
+            color: #ffffff;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .site-title {
+            color: white;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .white-text-black-border {
+            color: white;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+
+        @media (min-width: 768px) {
+            .site-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .site-slogan {
+            font-size: 1.1rem;
+            color: white;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+
+        .wp-block-details {
+            background-color: #ffffff;
+            border: 1px solid #d4edda;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wp-block-details:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .wp-block-details summary {
+            font-weight: 700;
+            color: #000000;
+            cursor: pointer;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted #ccc;
+            line-height: 1.4;
+        }
+
+        .wp-block-details p {
+            color: #000000;
+            margin-top: 1rem;
+        }
+
+        .cta-heading {
+            color: #000000;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, black, red);
+            color: rgb(255, 255, 255);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20));
+            transform: translateY(-2px);
+            border-color: #000000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .main-footer {
+            background-color: #000000;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .white-background-section {
+            background-color: white;
+        }
+
+        .form-section {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="email"],
+        .form-section textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .form-section textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-section input[type="submit"] {
+            background: linear-gradient(to right, black, red);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-section input[type="submit"]:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="selection:bg-green-200 selection:text-green-800">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <header class="main-header rounded-xl mb-12">
+            <h1 class="site-title">513th Frog Battalion</h1>
+            <p class="site-slogan">Leap into Victory</p>
+        </header>
+
+        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="index.html" class="cta-button w-32 h-12">Home</a>
+                <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
+                <a href="event.html" class="cta-button w-32 h-12">Events</a>
+            </div>
+        </div>
+
+        <main class="mb-12">
+            <section class="wp-block-details">
+                <p>513th nerd herd and geek corner. Run by total noobs.</p>
+                <summary><strong>Our servers</strong></summary>
+                <p>Minecraft</p>
+                <p>Version: 1.21.4 Java-Vanilla         -><strong>often-magical.gl.joinmc.link</strong></p>
+                <p>Version: 1.21.83.1 Bedrock-Vanilla    -><strong>dead-shipped.gl.at.ply.gg</strong></p>
+                <p>Version: 2.41 AllTheMods10          -><strong>jun-hobby.gl.joinmc.link</strong></p>
+            </section>
+
+            <section class="form-section">
+                <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">Server Rental Inquiry</h3>
+                <p>Price: 1€/1Gb ram. If any questions, join 513th Frog Battalion and contact SEELM.</p>
+                <form id="serverRentalForm">
+                    <div class="mb-4">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="server-type">Desired Game/Server Type (e.g., Minecraft Java, Bedrock, Specific Modpack):</label>
+                        <input type="text" id="server-type" name="server-type" placeholder="e.g., Minecraft Java 1.21.4" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message">Additional Details/Requests:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your server needs (number of players, duration, ram, specific mods, etc.)"></textarea>
+                    </div>
+                    <input type="submit" value="Submit Inquiry">
+                </form>
+            </section>
+        </main>
+
+        <footer class="main-footer rounded-xl">
+            <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
+            <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
+        </footer>
+
+    </div>
+    <script>
+        // --- JavaScript to handle form submission to Google Sheet ---
+        const form = document.getElementById('serverRentalForm');
+        // REMEMBER TO REPLACE THIS WITH YOUR DEPLOYED WEB APP URL!
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzC79Pw6jcd07aaQKkADbt5WeCIR00jV2kgPqFYAnu5ijETZhRd-GpkOA8BMMG9xpBmuw/exec';
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(form);
+            // Convert FormData to URL-encoded string for e.parameter
+            const params = new URLSearchParams(formData).toString(); // This correctly prepares data for e.parameter
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Keep 'no-cors' for cross-origin Apps Script calls
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded', // THIS IS THE CRITICAL CHANGE
+                    },
+                    body: params, // Send as URL-encoded string
+                });
+
+                // With 'no-cors', we cannot read the response object or its status directly.
+                // We assume success and redirect. If you need robust error checking,
+                // you'd need to configure CORS on the Apps Script side and remove 'no-cors'.
+                console.log('Form data sent to Google Sheet. Redirecting...');
+                window.location.href = 'thank-you.html'; // Redirect to your thank you page
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting your form. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html>
