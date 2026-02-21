@@ -3,235 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>513th Frog Battalion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>513th Frog Battalion | Leap into Victory</title>
     <style>
-        /*
-        Custom CSS for the 513th Frog Battalion Website
-        This section overrides or enhances Tailwind's defaults for specific elements
-        to create a unique theme.
-        */
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
-            color: #333;
-            line-height: 1.6;
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: rgba(31, 40, 51, 0.9);
+            --primary: #66fcf1;
+            --secondary: #45a29e;
+            --text-main: #c5c6c7;
+            --accent-red: #c0392b;
+            --accent-red-hover: #e74c3c;
         }
 
-        /* Styling for the main header section */
-        .main-header {
-            /* --- Background image styles added here --- */
-            background-image: url('https://i.imgur.com/MYxqJCY.jpeg'); /* Replace with your actual image URL */
-            background-size: cover; /* Ensures the image covers the entire header area */
-            background-position: center; /* Centers the background image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-color: #f7f7f7; /* Fallback background color if image fails to load */
-            /* --- End background image styles --- */
-
-            color: #ffffff; /* Changed to white for better visibility against a potentially dark background image */
-            padding: 2.5rem 0; /* More vertical padding */
-            text-align: center;
-            border-bottom-left-radius: 15px; /* Rounded corners for the bottom */
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
-        }
-        /* Changes for gradient text */
-        .site-title {
-            color: white; /* Sets the text color to white */
-            text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
-            font-size: 2.5rem; /* Larger title on desktop */
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .white-text-black-border {
-            color: white; /* Sets the text color to white */
-            text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
-        }
-
-        @media (min-width: 768px) {
-            .site-title {
-                font-size: 3.5rem; /* Even larger on bigger screens */
-            }
-        }
-
-        .site-slogan {
-            font-size: 1.1rem;
-            color: white; /* Sets the text color to white */
-            text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
-        }
-
-        /* Styling for the details (accordion) block */
-        .wp-block-details {
-            background-color: #ffffff; /* White background for readability */
-            border: 1px solid #d4edda; /* Subtle light green border */
-            padding: 1.5rem; /* Ample padding */
-            margin-bottom: 2rem; /* Space below the block */
-            border-radius: 10px; /* Nicely rounded corners */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More pronounced shadow */
-            transition: all 0.3s ease-in-out;
-        }
-
-        .wp-block-details:hover {
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
-        }
-
-        .wp-block-details summary {
-            font-weight: 700; /* Bolder summary text */
-            color: #000000; /* Sea green for summary */
-            cursor: pointer;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px dotted #ccc; /* Dotted separator */
-            line-height: 1.4; /* Improve line spacing in summary */
-        }
-
-        .wp-block-details p {
-            color: #000000; /* Slightly darker text for content */
-            margin-top: 1rem; /* Space paragraphs within details */
-        }
-
-        /* Styling for the "Check us out!" heading */
-        .cta-heading {
-            color: #000000; /* Dark frog green */
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-
-        /* Styling for the buttons */
-        .cta-button {
-            background: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
-            color: rgb(255, 255, 255);
-            padding: 0.75rem 1.75rem; /* Generous padding for good tap targets */
-            border-radius: 8px; /* Rounded button corners */
-            text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease; /* Changed to 'background' */
-            font-weight: 500;
-            display: inline-flex; /* Use flex for potential icon/text alignment */
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            /* STATISK BAGGRUND (Selve siden) */
+            background-image: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.7)), 
+                              url('bakgrund.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
             align-items: center;
+        }
+
+            /* HEADER (Top sektionen) */
+        header {
+            width: 80%;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://i.imgur.com/MYxqJCY.jpeg') center;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            border: 2px solid transparent; /* Placeholder for hover effect */
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to a darker red on the right */
-            transform: translateY(-2px); /* Subtle lift effect */
-            border-color: #000000; /* Darker green border on hover */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow on hover */
-        }
-
-        /* Footer styling */
-        .main-footer {
-            background-color: #000000; /* Darker, more grounded color */
-            color: #ecf0f1; /* Light text for contrast */
-            padding: 2rem 0;
+            align-items: center;
             text-align: center;
-            margin-top: 3rem; /* Space above the footer */
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+    
+            /* Ramar - matchar din border-bottom */
+            border-bottom: 4px solid var(--secondary);
+            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
+
+            /* Runda av alla hörn */
+            border-radius: 15px;
+    
+            box-sizing: border-box;
+            margin-top: 20px; /* Ger lite distans från toppen av sidan */
         }
 
-        /* New class for a white background section */
-        .white-background-section {
-            background-color: white; /* Sets the background to white */
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: -30px;
+            display: flex;
+            gap: 15px;
+            z-index: 30; /* Ligger ovanför headern */
+        }
+
+        .nav-btn {
+            background: #1f2833;
+            color: var(--primary);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--secondary);
+            border-radius: 5px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Content Structure */
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 60px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 { color: var(--primary); border-bottom: 1px solid var(--secondary); padding-bottom: 10px; margin-top: 0; }
+        h3 { color: var(--secondary); margin-top: 20px; }
+
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 12px; line-height: 1.6; }
+        .check { color: var(--primary); font-weight: bold; margin-right: 8px; }
+
+        /* Socials */
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-item img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            transition: 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .social-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        .discord-frame {
+            border-top: 1px solid var(--secondary);
+            padding-top: 30px;
+        }
+
+        /* Donation Card */
+        .donate-box {
+            text-align: center;
+            background: linear-gradient(145deg, #1f2833, #0b0c10);
+        }
+
+        .donate-btn {
+            background: var(--accent-red);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .donate-btn:hover { 
+            background: var(--accent-red-hover);
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="selection:bg-green-200 selection:text-green-800">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+<body>
 
-        <header class="main-header rounded-xl mb-12">
-            <h1 class="site-title">513th Frog Battalion</h1>
-            <p class="site-slogan">Leap into Victory</p>
-        </header>
+    <header>
+        <h1 id="main-title">513th Frog Battalion</h1>
+        <p>"Leap into Victory"</p>
+    </header>
 
-        <!-- New section for quick access buttons -->
-        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="index.html" class="cta-button w-32 h-12">Home</a>
-                <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
-                <a href="https://discord.gg/cPDBsjYtyG" class="cta-button w-32 h-12">Discord</a>
+    <nav>
+        <a href="index.html" class="nav-btn">HOME</a>
+        <a href="Serverhosting.html" class="nav-btn">SERVER HOSTING</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>🐸 Welcome to the Frontlines</h2>
+            <p><strong>The 513th Frog Battalion</strong> isn't just another War Thunder squadron—we're a community of tactical thinkers, competitive players, and meme-loving warriors who take teamwork seriously... but not ourselves.</p>
+            <p>Whether we're pushing a capture point in a coordinated blitz or sharing the latest "Skill Issue" moment in Discord, the goal is the same: <strong>having fun together.</strong></p>
+            
+            <h3>Why join the Battalion?</h3>
+            <ul>
+                <li><span class="check">✔</span> <strong>Coordinated SRE/SQB:</strong> Experience high-level tactical gameplay with a team that focuses on both results and camaraderie.</li>
+                <li><span class="check">✔</span> <strong>Events & Competitions:</strong> Participate in our internal tournaments and unique events where glory is on the line.</li>
+                <li><span class="check">✔</span> <strong>Dedicated Servers:</strong> We provide stable servers to ensure the best gaming experience for our members.</li>
+                <li><span class="check">✔</span> <strong>Brotherhood (and Memes):</strong> Our Discord is the heart of the battalion—a place for strategy and superior frog-tier humor.</li>
+            </ul>
+
+            <p style="font-style: italic; border-top: 1px solid var(--secondary); padding-top: 15px; margin-top: 20px;">
+                Whether you’re a hardened veteran or a new recruit, you’ve just found your unit. Suit up, hop in, and let's cause some havoc.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Community Hub</h2>
+            <div class="social-grid">
+                <a href="https://www.tiktok.com/@513thfrogbattalion" target="_blank" class="social-item">
+                    <img src="frog_tiktok.jpg" alt="TikTok">
+                </a>
+                <a href="https://www.youtube.com/@513thFrogs" target="_blank" class="social-item">
+                    <img src="frog_youtube.jpg" alt="YouTube">
+                </a>
+                <a href="https://discord.gg/cPDBsjYtyG" target="_blank" class="social-item">
+                    <img src="frog_discord.png" alt="Discord">
+                </a>
+            </div>
+
+            <div class="discord-frame">
+                <h3>Join Our Discord</h3>
+                <iframe 
+                    src="https://discord.com/widget?id=1196158088642822205&theme=dark" 
+                    width="100%" 
+                    height="500" 
+                    allowtransparency="true" 
+                    frameborder="0" 
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                </iframe>
             </div>
         </div>
 
-        <main>
-            <details class="wp-block-details">
-                <summary>
-                    🐸 Welcome to the 513th Frog Battalion<br>
-                    <strong>Join the frontlines of chaos, coordination, and amphibious domination.</strong><br>
-                    <p>The 513th Frog Battalion isn't just another War Thunder squadron—we're a community of tactical thinkers, competitive players, and meme-loving warriors who take teamwork seriously... but not ourselves</p>
-                    <p>Whether you're a squadron battle grinder, event enthusiast, or just someone looking for a reliable crew, you’ve just found your unit.</p>
-                </summary>
-
-                    <h2>🔥 What We Do: Events & Squadron Battles</h2>
-                    <h3>Squadron Battles (SQB)</h3>
-                    <p>Join our competitive teams for ranked battles with real coordination, clear comms, and big rewards. We focus on teamwork to climb the ranks and secure those valuable rewards.</p>
-                    <h3>Community Events & Chaos Nights</h3>
-                    <p>Because frogs need fun too. Dive into custom battles, cinematic missions, and meme-fueled madness. These are perfect for unwinding and enjoying War Thunder with the squad.</p>
-                    <h3>Active Discord Hub</h3>
-                    <p>Strategy, banter, clips, comms, and coordination. It's where the swamp really comes to life for all our events and battle planning.</p>
-                    <h3>Check Out Our Shop</h3>
-                    <p>Rep the Battalion with exclusive merch. — frog-flavored, battle-approved. (Work in progress)</p>
-                    <h3>Follow Us on Social Media</h3>
-                    <p>See mission highlights, get event updates, and enjoy the best memes from the swamp. Don’t miss a hop — we're active on [insert platforms, e.g., TikTok, YouTube, etc.].</p>
-
-                    <h2>🫡 Why Join the 513th?</h2>
-                    <h3>Supportive for all skill levels</h3>
-                    <p>Learn the ropes or lead your own ops in a friendly and engaging environment.</p>
-                    <h3>Organized and active</h3>
-                    <p>Weekly sessions, fast response, and dependable leadership for consistent gameplay.</p>
-                    <h3>Flexible & fun</h3>
-                    <p>Show up for what you enjoy, no pressure to participate in everything.</p>
-
-                    <h2>🎖️ Ready to Enlist?</h2>
-                    <p><strong>Join our Discord</strong> and hop into a competitive session or community event. Whether you’re seeking structured battles or just want a squad that has your six, **the 513th is ready for you.**</p>
-                    <p>🐸 **513th Frog Battalion – Leap into Victory**</p>
-            </details>
-
-            <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
-                    <h2 class="cta-heading text-3xl font-bold mb-6">Check us out!</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                    <a href="https://www.tiktok.com/@513thfrogbattalion">
-                    <img src="frog_tiktok.jpg" alt="frog_tiktok.jpg" class="w-32 h-32 mx-auto mt-4 rounded-lg">
-                    </a>
-
-                    <a href="https://www.youtube.com/@513thFrogs">
-                    <img src="frog_youtube.jpg" alt="frog_youtube" class="w-32 h-32 mx-auto mt-4 rounded-lg">
-                    </a>
-                </div>
-            </div>   
-            <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
-                <h2 class="cta-heading text-3xl font-bold mb-6">Help us grow! Money goes to events at 513th.</h2>
-                <div class="flex flex-col items-center gap-4"> <a href="https://www.paypal.com/donate/?hosted_button_id=UE95NU5CNT8MG" class="cta-button w-32 h-16">Donate (Paypal)</a>
-                <img src="QR-kod.png" alt="QR Code for 513th Frog Battalion Discord" class="w-32 h-32 mx-auto mt-4 rounded-lg">
-            </div>
+        <div class="card donate-box">
+            <h2>Support the Battalion</h2>
+            <p>Help us grow! Contributions go directly toward hosting events and prizes for the 513th.</p>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=UE95NU5CNT8MG" target="_blank" style="text-decoration: none;">
+                <button class="donate-btn">Donate via PayPal</button>
+            </a>
         </div>
-        </main>
-        <div class="flex flex-col md:flex-row justify-center items-start gap-8 mb-12">
-            <div class="white-background-section p-8 rounded-xl shadow-lg text-center w-full md:w-1/2 max-w-lg">
-                <h1 class="text-black text-3xl font-bold mb-6">513th Frog Battalion</h1>
-                <iframe class="w-full" src="https://discord.com/widget?id=1196158088642822205&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
-        </div>
-        <footer class="main-footer rounded-xl">
-            <p>© 2025 513th Frog Battalion. All rights reserved.</p>
-        </footer>
 
-    </div> </body>
+    </div>
+    <footer>
+        &copy; 2026 513th Frog Battalion. All rights reserved.
+    </footer>
+
+</body>
 </html>
