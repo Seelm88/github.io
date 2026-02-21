@@ -3,270 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>513th Frog Battalion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>513th Frog Battalion | Leap into Victory</title>
     <style>
-        /* Your existing CSS (no changes needed here for functionality) */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
-            color: #333;
-            line-height: 1.6;
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: rgba(31, 40, 51, 0.9);
+            --primary: #66fcf1;
+            --secondary: #45a29e;
+            --text-main: #c5c6c7;
+            --accent-red: #c0392b;
+            --accent-red-hover: #e74c3c;
         }
 
-        .main-header {
-            background-image: url('https://i.imgur.com/MYxqJCY.jpeg');
-            background-size: cover;
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            /* STATISK BAGGRUND (Selve siden) */
+            background-image: linear-gradient(rgba(11, 12, 16, 0.7), rgba(11, 12, 16, 0.7)), 
+                              url('bakgrund.jpg');
+            background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #f7f7f7;
-            color: #ffffff;
-            padding: 2.5rem 0;
-            text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        .site-title {
-            color: white;
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .white-text-black-border {
-            color: white;
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-        }
-
-        @media (min-width: 768px) {
-            .site-title {
-                font-size: 3.5rem;
-            }
-        }
-
-        .site-slogan {
-            font-size: 1.1rem;
-            color: white;
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-        }
-
-        .wp-block-details {
-            background-color: #ffffff;
-            border: 1px solid #d4edda;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .wp-block-details:hover {
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-            transform: translateY(-2px);
-        }
-
-        .wp-block-details summary {
-            font-weight: 700;
-            color: #000000;
-            cursor: pointer;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px dotted #ccc;
-            line-height: 1.4;
-        }
-
-        .wp-block-details p {
-            color: #000000;
-            margin-top: 1rem;
-        }
-
-        .cta-heading {
-            color: #000000;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            font-weight: 600;
-        }
-
-        .cta-button {
-            background: linear-gradient(to right, black, red);
-            color: rgb(255, 255, 255);
-            padding: 0.75rem 1.75rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease;
-            font-weight: 500;
-            display: inline-flex;
+            background-size: cover;
+            
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
             align-items: center;
+        }
+
+            /* HEADER (Top sektionen) */
+        header {
+            width: 80%;
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://i.imgur.com/MYxqJCY.jpeg') center;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            border: 2px solid transparent;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(to right, black, rgb(112, 20, 20));
-            transform: translateY(-2px);
-            border-color: #000000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        .main-footer {
-            background-color: #000000;
-            color: #ecf0f1;
-            padding: 2rem 0;
+            align-items: center;
             text-align: center;
-            margin-top: 3rem;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+    
+            /* Ramar - matchar din border-bottom */
+            border-bottom: 4px solid var(--secondary);
+            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
+
+            /* Runda av alla hörn */
+            border-radius: 15px;
+    
+            box-sizing: border-box;
+            margin-top: 20px; /* Ger lite distans från toppen av sidan */
         }
 
-        .white-background-section {
-            background-color: white;
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
         }
 
-        .form-section {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--primary);
         }
 
-        .form-section label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
+        /* Navigation */
+        nav {
+            margin-top: -30px;
+            display: flex;
+            gap: 15px;
+            z-index: 30; /* Ligger ovanför headern */
         }
 
-        .form-section input[type="text"],
-        .form-section input[type="email"],
-        .form-section textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #ccc;
+        .nav-btn {
+            background: #1f2833;
+            color: var(--primary);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--secondary);
             border-radius: 5px;
-            font-size: 1rem;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Content Structure */
+        .container {
+            max-width: 900px;
+            width: 90%;
+            margin: 60px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 { color: var(--primary); border-bottom: 1px solid var(--secondary); padding-bottom: 10px; margin-top: 0; }
+        h3 { color: var(--secondary); margin-top: 20px; }
+
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 12px; line-height: 1.6; }
+        .check { color: var(--primary); font-weight: bold; margin-right: 8px; }
+        
+        /* Server List Styling */
+        .server-entry {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #1f2833;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .server-entry strong { color: var(--primary); }
+        .ip-address { font-family: 'Courier New', Courier, monospace; color: #fff; background: #000; padding: 2px 8px; border-radius: 4px; }
+
+        /* Form Styling */
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: var(--secondary); font-weight: bold; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0b0c10;
+            border: 1px solid var(--secondary);
+            color: white;
+            border-radius: 5px;
             box-sizing: border-box;
         }
 
-        .form-section textarea {
-            min-height: 120px;
-            resize: vertical;
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
         }
 
-        .form-section input[type="submit"] {
-            background: linear-gradient(to right, black, red);
+        .submit-btn {
+            background: linear-gradient(to right, #000, var(--accent-red));
             color: white;
-            padding: 1rem 2rem;
+            padding: 15px 30px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
+            border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            width: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100%;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
 
-        .form-section input[type="submit"]:hover {
-            background: linear-gradient(to right, black, rgb(112, 20, 20));
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        .submit-btn:hover {
+            background: var(--accent-red-hover);
+            transform: scale(1.02);
         }
+
+        footer { margin-bottom: 40px; color: var(--secondary); font-size: 0.9rem; }
     </style>
 </head>
-<body class="selection:bg-green-200 selection:text-green-800">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+<body>
 
-        <header class="main-header rounded-xl mb-12">
-            <h1 class="site-title">513th Frog Battalion</h1>
-            <p class="site-slogan">Leap into Victory</p>
-        </header>
+    <header>
+        <h1>Server Hosting</h1>
+        <p style="color: var(--primary); font-style: italic;">513th Nerd Herd & Geek Corner</p>
+    </header>
 
-        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="index.html" class="cta-button w-32 h-12">Home</a>
-                <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
+    <nav>
+        <a href="index.html" class="nav-btn">HOME</a>
+        <a href="Serverhosting.html" class="nav-btn">SERVER HOSTING</a>
+        <a href="https://discord.gg/cPDBsjYtyG" class="nav-btn">DISCORD</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>Current Active Servers</h2>
+            <p>Run by total noobs, for total legends. Join our dedicated servers below:</p>
+            
+            <div class="server-entry">
+                <span><strong>7 days to die</strong> (v2.5 b32)</span>
+                <span class="ip-address">Join discord to gain access</span>
+            </div>
+
+            <div class="server-entry">
+                <span><strong>Minecraft-AllTheMods 10</strong> (v21.1.217)</span>
+                <span class="ip-address">Join discord to gain access</span>
+            </div>
+
+            <div class="server-entry">
+                <span><strong>Eco</strong> (upcomming)</span>
+                <span class="ip-address">Planned server 2026</span>
             </div>
         </div>
 
-        <main class="mb-12">
-            <section class="wp-block-details">
-                <p>513th nerd herd and geek corner. Run by total noobs.</p>
-                <summary><strong>Our servers</strong></summary>
-                <p>7 days to die: recent-><strong>Get whitelisted in our discord</strong></p>
-                <p>Minecraft: Version: 2.41 AllTheMods10-><strong> Get whitelisted in our discord</strong></p>
-                <p>Eco Server upcomming!</p>
-            </section>
+        <div class="card">
+            <h2>Server Rental Inquiry</h2>
+            <p style="margin-bottom: 25px;">Rate: <strong>1€ / 1GB RAM</strong>. For custom requests or questions, contact <span style="color:var(--primary)">SEELM</span> in the Discord HQ.</p>
+            
+            <form id="serverRentalForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <section class="form-section">
-                <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">Server Rental Inquiry</h3>
-                <p>Price: 1€/1Gb ram. If any questions, join 513th Frog Battalion and contact SEELM.</p>
-                <form id="serverRentalForm">
-                    <div class="mb-4">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="server-type">Desired Game/Server Type (e.g., Minecraft Java, Bedrock, Specific Modpack):</label>
-                        <input type="text" id="server-type" name="server-type" placeholder="e.g., Minecraft Java 1.21.4" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="message">Additional Details/Requests:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your server needs (number of players, duration, ram, specific mods, etc.)"></textarea>
-                    </div>
-                    <input type="submit" value="Submit Inquiry">
-                </form>
-            </section>
-        </main>
+                <div class="form-group">
+                    <label for="server-type">Server Type / Modpack</label>
+                    <input type="text" id="server-type" name="server-type" placeholder="e.g., Minecraft Java 1.21.4" required>
+                </div>
 
-        <footer class="main-footer rounded-xl">
-            <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
-            <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
-        </footer>
+                <div class="form-group">
+                    <label for="message">Additional Requirements (RAM, Player Slots, etc.)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Tactical Inquiry</button>
+            </form>
+        </div>
 
     </div>
+
+    <footer>
+        &copy; 2026 513th Frog Battalion. All rights reserved.
+    </footer>
+
     <script>
-        // --- JavaScript to handle form submission to Google Sheet ---
         const form = document.getElementById('serverRentalForm');
-        // REMEMBER TO REPLACE THIS WITH YOUR DEPLOYED WEB APP URL!
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzC79Pw6jcd07aaQKkADbt5WeCIR00jV2kgPqFYAnu5ijETZhRd-GpkOA8BMMG9xpBmuw/exec';
 
         form.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Prevent default form submission
-
+            e.preventDefault();
             const formData = new FormData(form);
-            // Convert FormData to URL-encoded string for e.parameter
-            const params = new URLSearchParams(formData).toString(); // This correctly prepares data for e.parameter
+            const params = new URLSearchParams(formData).toString();
 
             try {
-                const response = await fetch(scriptURL, {
+                await fetch(scriptURL, {
                     method: 'POST',
-                    mode: 'no-cors', // Keep 'no-cors' for cross-origin Apps Script calls
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded', // THIS IS THE CRITICAL CHANGE
-                    },
-                    body: params, // Send as URL-encoded string
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: params,
                 });
-
-                // With 'no-cors', we cannot read the response object or its status directly.
-                // We assume success and redirect. If you need robust error checking,
-                // you'd need to configure CORS on the Apps Script side and remove 'no-cors'.
-                console.log('Form data sent to Google Sheet. Redirecting...');
-                window.location.href = 'thank-you.html'; // Redirect to your thank you page
-
+                alert('Inquiry sent successfully! Redirecting...');
+                window.location.href = 'thank-you.html';
             } catch (error) {
-                console.error('Error submitting form:', error);
-                alert('There was an error submitting your form. Please try again later.');
+                console.error('Error!', error.message);
+                alert('Submission failed. Please check your connection.');
             }
         });
     </script>
