@@ -1,0 +1,468 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>513th Frog Battalion Recruitment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#101214;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    width:min(1400px,90%);
+    margin:auto;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.80)
+    ),
+    url("frog-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:950px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,7vw,7rem);
+    line-height:.92;
+    font-weight:900;
+
+    color:#ffd700;
+
+    text-shadow:
+        -3px -3px 0 #fff,
+         3px -3px 0 #fff,
+        -3px 3px 0 #fff,
+         3px 3px 0 #fff,
+         0 0 25px rgba(255,215,0,.8);
+}
+
+.hero p{
+    margin-top:30px;
+    font-size:1.35rem;
+    line-height:1.8;
+    max-width:850px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:18px 36px;
+    border-radius:12px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:linear-gradient(#ffe46d,#ffb300);
+    color:#111;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* REQUIREMENTS */
+
+.section{
+    padding:120px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    color:#ffd700;
+    margin-bottom:60px;
+    font-weight:900;
+}
+
+.requirements-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1b1f24;
+    padding:35px;
+    border-radius:18px;
+    border:1px solid rgba(255,215,0,.25);
+}
+
+.card-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:#15181b;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.about-box{
+    background:#1b1f24;
+    padding:30px;
+    border-radius:18px;
+}
+
+.about-box h3{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+/* JOIN */
+
+.join{
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.75)
+    ),
+    url("frog-banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.join h2{
+    font-size:4rem;
+    color:#ffd700;
+
+    text-shadow:
+        -2px -2px 0 #fff,
+         2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+         2px 2px 0 #fff;
+}
+
+.join p{
+    margin:25px auto;
+    max-width:800px;
+    font-size:1.3rem;
+}
+
+.join-button{
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:
+    linear-gradient(
+        #ffe76d,
+        #ffb300
+    );
+
+    color:#111;
+
+    text-decoration:none;
+    font-size:2rem;
+    font-weight:900;
+
+    padding:24px 70px;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 0 25px rgba(255,215,0,.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d0f11;
+    text-align:center;
+    padding:30px;
+    color:#888;
+}
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.section-title{
+    font-size:2.2rem;
+}
+
+.join h2{
+    font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+                513th Frog Battalion<br>
+                Looking For SQB Members!
+            </h1>
+
+            <p>
+                Do you have what it takes to leap into battle and rain destruction upon your enemies?!
+                Do you crave the rush of aerial dogfights and the earth-shaking power of armored warfare?!
+                WELL, GUESS WHAT?!
+                We're looking for elite warriors who aren't afraid to ribbit in the face of danger!
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#join" class="btn btn-primary">
+                    JOIN NOW
+                </a>
+
+                <a href="#gallery" class="btn btn-secondary">
+                    BATTLE GALLERY
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            WHAT WE DEMAND 💀
+        </h2>
+
+        <div class="requirements-grid">
+
+            <div class="card">
+                <div class="card-icon">🎖️</div>
+                <h3>LEVEL 100+</h3>
+                <p>
+                    If you're not a seasoned war amphibian,
+                    don't even think about it.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎤</div>
+                <h3>WORKING MIC</h3>
+                <p>
+                    Psychic communication isn't reliable
+                    in combat.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🗣️</div>
+                <h3>ENGLISH FLUENCY</h3>
+                <p>
+                    So we can scream strategies
+                    and victory cries properly.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚔️</div>
+                <h3>RANK VI+ IN TWO NATIONS</h3>
+                <p>
+                    Air or Ground.
+                    If you ain't got the gear,
+                    you ain't got the hops.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery" class="section gallery">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            FROG BATTALION IN ACTION
+        </h2>
+
+        <div class="gallery-grid">
+
+            <img src="screenshot1.jpg">
+            <img src="screenshot2.jpg">
+            <img src="screenshot3.jpg">
+            <img src="screenshot4.jpg">
+            <img src="screenshot5.jpg">
+            <img src="screenshot6.jpg">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            WHY JOIN 513TH?
+        </h2>
+
+        <div class="about-grid">
+
+            <div class="about-box">
+                <h3>🏆 Competitive Squadron Battles</h3>
+                <p>Fight alongside experienced pilots and tankers.</p>
+            </div>
+
+            <div class="about-box">
+                <h3>🎯 Active Community</h3>
+                <p>Daily activity, voice channels and organized events.</p>
+            </div>
+
+            <div class="about-box">
+                <h3>✈️ Air & Ground Experts</h3>
+                <p>Learn from veteran players and improve together.</p>
+            </div>
+
+            <div class="about-box">
+                <h3>🐸 Frog Brotherhood</h3>
+                <p>More than a squadron. A swamp-based military family.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="join" class="section join">
+
+    <div class="container">
+
+        <h2>
+            READY TO RIBBIT IN THE FACE OF DANGER?
+        </h2>
+
+        <p>
+            Applications are open. Join the Discord,
+            meet the battalion and start your recruitment process today.
+        </p>
+
+        <a
+            href="https://discord.gg/YOURINVITE"
+            class="join-button"
+            target="_blank">
+
+            JOIN THE BATTALION
+
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2025 513th Frog Battalion • War Thunder Squadron
+</footer>
+
+</body>
+</html>
+```
