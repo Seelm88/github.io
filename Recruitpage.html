@@ -179,27 +179,31 @@ body{
 .gallery{
     background:#15181b;
 }
-.gallery-grid img{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:contain;
-    background:#1b1f24;
-    border-radius:15px;
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-bottom:60px;
 }
 
 .gallery-grid img{
     width:100%;
-    height:350px;
-    object-fit:contain; /* visar hela bilden */
-    background:#1b1f24; /* fyller ut tomma ytor snyggt */
+    aspect-ratio:16/9;
+    object-fit:cover;
     border-radius:15px;
+}
+
+.logo-image{
+    object-fit:contain !important;
+    background:#1b1f24;
 }
 
 .video-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:30px;
-    margin-top:60px;
+    gap:20px;
+    margin-top:80px;
 }
 
 .video-grid iframe {
@@ -421,7 +425,7 @@ footer{
 
         <div class="gallery-grid">
 
-            <img src="images/galleri1.png">
+            <img src="images/galleri1.png" class="logo-image">
             <img src="images/galleri2.png">
             <img src="images/galleri3.jpg">
             <img src="images/galleri4.png">
