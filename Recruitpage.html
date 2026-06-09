@@ -43,7 +43,7 @@ body{
         rgba(0,0,0,.35),
         rgba(0,0,0,.80)
     ),
-    url("frog-recruitment-bg.png");
+    url("images/frog-recruitment-bg.png");
 
     background-size:cover;
     background-position:center;
@@ -193,6 +193,19 @@ body{
     border-radius:15px;
 }
 
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.video-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
 /* ABOUT */
 
 .about-grid{
@@ -222,7 +235,7 @@ body{
         rgba(0,0,0,.75),
         rgba(0,0,0,.75)
     ),
-    url("frog-join-bg.png");
+    url("images/frog-join-bg.png");
 
     background-size:cover;
     background-position:center;
@@ -405,14 +418,25 @@ footer{
 
         <div class="gallery-grid">
 
-            <img src="screenshot1.jpg">
-            <img src="screenshot2.jpg">
-            <img src="screenshot3.jpg">
-            <img src="screenshot4.jpg">
-            <img src="screenshot5.jpg">
-            <img src="screenshot6.jpg">
+            <img src="images/galleri1">
+            <img src="images/galleri2">
+            <img src="images/galleri3">
+            <img src="images/galleri4">
 
         </div>
+
+    <div class="video-grid">
+        <iframe
+            src="https://www.youtube.com/embed/XE6qixDIY0w"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
+
+        <iframe
+            src="https://www.youtube.com/embed/dxraqtCYbHw"
+            title="YouTube video player"
+            allowfullscreen>
+        </iframe>
 
     </div>
 
