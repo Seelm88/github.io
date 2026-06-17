@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>513th Frog Battalion | Leap into Victory</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
         /* ==========================================================================
@@ -135,22 +137,34 @@
         .hero h1 {
             display: flex;
             flex-direction: column;
-            line-height: 0.9;
+            line-height: 0.85; /* Gjorde radavståndet aningen tightare för att matcha */
             margin-bottom: 30px;
         }
 
         .title-main {
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(4.5rem, 7vw, 7rem);
-            font-weight: 900;
+            font-weight: 900; /* Tvingar fram den fetaste vikten */
             color: #ffd700;
-            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 20px rgba(255, 215, 0, 0.5);
+            letter-spacing: -0.05em; /* Drar ihop bokstäverna ordentligt */
+            
+            /* Ger den perfekta, tjocka vita kantlinjen från SQB-bilden */
+            -webkit-text-stroke: 3px #fff; 
+            
+            /* Lägger en subtil glöd bakom den vita kanten */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .title-sub {
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(3.8rem, 6vw, 5.8rem);
             font-weight: 900;
             color: #ffd700;
-            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 20px rgba(255, 215, 0, 0.5);
+            letter-spacing: -0.05em;
+            
+            /* Samma tjocka kantlinje här */
+            -webkit-text-stroke: 3px #fff;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .hero p {
@@ -167,7 +181,7 @@
             flex-wrap: wrap;
             margin-top: 35px;
         }
-
+        
         /* ==========================================================================
            4. Grid-kort (About / Varför gå med)
            ========================================================================== */
