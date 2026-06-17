@@ -136,7 +136,8 @@
         .hero h1 {
             display: flex;
             flex-direction: column;
-            line-height: 0.85; /* Gjorde radavståndet aningen tightare för att matcha */
+            line-height: 1.0; /* Gjorde radavståndet aningen tightare för att matcha */
+            gap: 15px;        /* Justera denna siffra för att få exakt det avstånd du vill ha */
             margin-bottom: 30px;
         }
 
@@ -156,7 +157,7 @@
 
         .title-sub {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(3.8rem, 6vw, 5.8rem);
+            font-size: clamp(3.5rem, 6vw, 5.8rem);
             font-weight: 900;
             color: #ffd700;
             letter-spacing: -0.05em;
