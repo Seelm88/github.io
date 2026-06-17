@@ -46,14 +46,14 @@
         }
 
         /* ==========================================================================
-           2. Knappar
+           2. Knappar & Dropdown
            ========================================================================== */
         .btn {
             text-decoration: none;
             padding: 18px 36px;
             border-radius: 12px;
             font-weight: 800;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .btn:hover {
@@ -71,6 +71,52 @@
             color: #fff;
         }
 
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: #1b1f24;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 14px 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background: #ffd700;
+            color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* ==========================================================================
            3. Hero-sektion
            ========================================================================== */
@@ -78,22 +124,20 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-
-            background: 
-            linear-gradient(
-              rgba(0,0,0,.35),
-              rgba(0,0,0,.80)
-            ), 
-            url('https://i.imgur.com/MYxqJCY.jpeg');
-
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.80)), url('https://i.imgur.com/MYxqJCY.jpeg');
             background-size: cover;
             background-position: center;
-            display:flex;
-            align-items:center;
         }
 
         .hero-content {
             max-width: 1250px;
+        }
+
+        .hero h1 {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            margin-bottom: 30px;
         }
 
         .title-main, 
@@ -101,12 +145,11 @@
             display: block;
             font-weight: 900;
             color: #ffd700;
-            -webkit-text-stroke: 1.5px #fff; /* Skarpare och modernare kontur */
+            -webkit-text-stroke: 1.5px #fff;
         }
 
         .title-main {
             font-size: clamp(3.5rem, 7vw, 7rem);
-            line-height: 1.1;
         }
 
         .title-sub {
@@ -115,10 +158,11 @@
         }
 
         .hero p {
-            margin: 25px 0;
+            margin: 25px 0 35px 0;
             font-size: 1.2rem;
             max-width: 800px;
             line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .hero-buttons {
@@ -128,49 +172,8 @@
             margin-top: 35px;
         }
 
-        .dropdown{
-            position:relative;
-            display:inline-block;
-        }
-
-        .dropdown-btn{
-            border:none;
-            cursor:pointer;
-        }
-
-        .dropdown-content{
-            display:none;
-            position:absolute;
-            top:100%;
-            left:0;
-            min-width:220px;
-            background:#1b1f24;
-            border:1px solid rgba(255,215,0,.3);
-            border-radius:12px;
-            overflow:hidden;
-            z-index:1000;
-        }
-
-        .dropdown-content a{
-            display:block;
-            padding:14px 18px;
-            color:white;
-            text-decoration:none;
-            font-weight:600;
-            transition:.2s;
-        }
-
-        .dropdown-content a:hover{
-            background:#ffd700;
-            color:#111;
-        }
-
-        .dropdown:hover .dropdown-content{
-            display:block;
-        }
-
         /* ==========================================================================
-           4. Om oss / Varför gå med
+           4. Grid-kort (About / Varför gå med)
            ========================================================================== */
         .about-grid {
             display: grid;
@@ -182,7 +185,7 @@
             background: #1b1f24;
             padding: 30px;
             border-radius: 18px;
-            border: 1px solid rgba(255, 215, 0, .25);
+            border: 1px solid rgba(255, 215, 0, 0.25);
             transition: transform 0.3s ease;
         }
 
@@ -202,7 +205,7 @@
         }
 
         /* ==========================================================================
-           5. Community Hub (Sociala medier & Discord)
+           5. Media & Hubbar (Sociala medier & Discord)
            ========================================================================== */
         .social-grid {
             display: flex;
@@ -225,21 +228,21 @@
             height: 110px;
             border-radius: 50%;
             object-fit: contain;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .discord-frame {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         /* ==========================================================================
-           6. Support / Donationer
+           6. Gå med / Support & Donationer
            ========================================================================== */
         .join {
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url('/images/donate-background.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/donate-background.png');
             background-size: cover;
             background-position: center;
         }
@@ -276,7 +279,7 @@
         }
 
         /* ==========================================================================
-           7. Footer
+           7. Footer & Media Queries
            ========================================================================== */
         footer {
             background: #0d0f11;
@@ -285,6 +288,24 @@
             color: #666;
             font-size: 0.9rem;
             border-top: 1px solid #16191d;
+        }
+
+        @media(max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .join h2 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -301,24 +322,20 @@
                 <p><strong>The 513th Frog Battalion</strong> is a community built by gamers, for gamers.<br>
 We love playing games, hanging out, and creating great memories together. No matter what game we're playing, you'll always find friendly faces, good laughs, and people ready to squad up.</p>
 
-        <div class="hero-buttons">
-
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-btn">
-                    QUICK LINKS ▼
-                </button>
-
-                <div class="dropdown-content">
-                    <a href="http://www.513th.se">Home</a>
-                    <a href="/joinus/">Join Us</a>
-                    <a href="/dedicatedservers/">Server Hosting</a>
+                <div class="hero-buttons">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-btn">
+                            QUICK LINKS ▼
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="http://www.513th.se">Home</a>
+                            <a href="/joinus/">Join Us</a>
+                            <a href="/dedicatedservers/">Server Hosting</a>
+                        </div>
+                    </div>
+                    <a href="#community" class="btn btn-secondary">COMMUNITY HUB</a>
+                    <a href="#support" class="btn btn-secondary">SUPPORT US</a>
                 </div>
-            </div>
-
-            <a href="#community" class="btn btn-secondary">COMMUNITY HUB</a>
-            <a href="#support" class="btn btn-secondary">SUPPORT US</a>
-
-        </div>
             </div>
         </div>
     </section>
