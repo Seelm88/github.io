@@ -1,335 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>513th Frog Battalion Recruitment</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Montserrat',sans-serif;
-    background:#101214;
-    color:white;
-    overflow-x:hidden;
-}
-
-.container{
-    width:min(1400px,90%);
-    margin:auto;
-}
-
-/* HERO */
-
-.hero{
-    position:relative;
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.80)
-    ),
-    url("/images/frog-recruitment-bg.png");
-
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-}
-
-.hero-content{
-    max-width:1250px;
-}
-
-.hero h1{
-    display:flex;
-    flex-direction:column;
-    line-height:.9;
-    margin-bottom:30px;
-}
-
-.title-main{
-    font-size:clamp(4.5rem, 7vw, 7rem);
-    font-weight:900;
-
-    color:#ffd700;
-
-    text-shadow:
-        -2px -2px 0 #fff,
-         2px -2px 0 #fff,
-        -2px  2px 0 #fff,
-         2px  2px 0 #fff,
-         0 0 20px rgba(255,215,0,.5);
-}
-
-.title-sub{
-    font-size:clamp(3.8rem, 6vw, 5.8rem);
-    font-weight:900;
-
-    color:#ffd700;
-
-    text-shadow:
-        -2px -2px 0 #fff,
-         2px -2px 0 #fff,
-        -2px  2px 0 #fff,
-         2px  2px 0 #fff,
-         0 0 20px rgba(255,215,0,.5);
-}
-
-.hero p{
-    margin-top:25px;
-    margin-bottom:35px;
-    font-size:1.25rem;
-    line-height:1.7;
-    max-width:700px;
-    color:rgba(255,255,255,.95);
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    margin-top:40px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    text-decoration:none;
-    padding:18px 36px;
-    border-radius:12px;
-    font-weight:800;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:linear-gradient(#ffe46d,#ffb300);
-    color:#111;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-secondary{
-    border:2px solid white;
-    color:white;
-}
-
-.btn-secondary:hover{
-    background:white;
-    color:black;
-}
-
-/* REQUIREMENTS */
-
-.section{
-    padding:120px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:3rem;
-    color:#ffd700;
-    margin-bottom:60px;
-    font-weight:900;
-}
-
-.requirements-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#1b1f24;
-    padding:35px;
-    border-radius:18px;
-    border:1px solid rgba(255,215,0,.25);
-}
-
-.card-icon{
-    font-size:3rem;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#ffd700;
-    margin-bottom:15px;
-}
-
-.card p{
-    line-height:1.6;
-}
-
-/* GALLERY */
-
-.gallery{
-    background:#15181b;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    margin-bottom:60px;
-}
-
-.gallery-grid img{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-.logo-image{
-    object-fit:contain !important;
-    background:#1b1f24;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    margin-top:80px;
-}
-
-.video-grid iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 12px;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.about-box{
-    background:#1b1f24;
-    padding:30px;
-    border-radius:18px;
-}
-
-.about-box h3{
-    color:#ffd700;
-    margin-bottom:15px;
-}
-
-/* JOIN */
-
-.join{
-    text-align:center;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.75),
-        rgba(0,0,0,.75)
-    ),
-    url("/images/frog-join-bg.png");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.join h2{
-    font-size:4rem;
-    color:#ffd700;
-
-    text-shadow:
-        -2px -2px 0 #fff,
-         2px -2px 0 #fff,
-        -2px 2px 0 #fff,
-         2px 2px 0 #fff;
-}
-
-.join p{
-    margin:25px auto;
-    max-width:800px;
-    font-size:1.3rem;
-}
-
-.join-button{
-    display:inline-block;
-
-    margin-top:20px;
-
-    background:
-    linear-gradient(
-        #ffe76d,
-        #ffb300
-    );
-
-    color:#111;
-
-    text-decoration:none;
-    font-size:2rem;
-    font-weight:900;
-
-    padding:24px 70px;
-
-    border-radius:18px;
-
-    box-shadow:
-        0 0 25px rgba(255,215,0,.4);
-}
-
-/* FOOTER */
-
-footer{
-    background:#0d0f11;
-    text-align:center;
-    padding:30px;
-    color:#888;
-}
-
-@media(max-width:768px){
-
-.hero{
-    text-align:center;
-}
-
-.hero-buttons{
-    justify-content:center;
-}
-
-.section-title{
-    font-size:2.2rem;
-}
-
-.join h2{
-    font-size:2.5rem;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>513th Frog Battalion Recruitment</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. Globala stilar & Reset
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #101214;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: min(1400px, 90%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 60px;
+            font-weight: 900;
+        }
+
+        /* ==========================================================================
+           2. Knappar & Dropdown
+           ========================================================================== */
+        .btn {
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(#ffe46d, #ffb300);
+            color: #111;
+        }
+
+        .btn-secondary {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* ==========================================================================
+           3. Hero-sektion
+           ========================================================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.80)), url("/images/frog-recruitment-bg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 1250px;
+        }
+
+        .hero h1 {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .title-main {
+            font-size: clamp(4.5rem, 7vw, 7rem);
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .title-sub {
+            font-size: clamp(3.8rem, 6vw, 5.8rem);
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .hero p {
+            margin: 25px 0 35px 0;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            max-width: 700px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* ==========================================================================
+           4. Grid-kort (Requirements & Info)
+           ========================================================================== */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #1b1f24;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card li {
+            list-style: none; /* Städar upp listpunkterna i infokortet */
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==========================================================================
+           5. Media & Hubbar (Galleri & Video)
+           ========================================================================== */
+        .gallery {
+            background: #15181b;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .logo-image {
+            object-fit: contain !important;
+            background: #1b1f24;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 80px;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 12px;
+        }
+
+        /* ==========================================================================
+           6. Gå med / Support & Donationer
+           ========================================================================== */
+        .join {
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/images/frog-join-bg.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .join h2 {
+            font-size: 4rem;
+            color: #ffd700;
+            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+        }
+
+        .join p {
+            margin: 25px auto;
+            max-width: 800px;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .join-button {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(#ffe76d, #ffb300);
+            color: #111;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 24px 70px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        .join-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* ==========================================================================
+           7. Footer & Media Queries
+           ========================================================================== */
+        footer {
+            background: #0d0f11;
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #16191d;
+        }
+
+        @media(max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .join h2 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid,
+            .video-grid {
+                grid-template-columns: 1fr; /* Gör galleri och video responsivt på mobilen */
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <section class="hero">
-
     <div class="container">
-
         <div class="hero-content">
-
             <h1>
                 <span class="title-main">513th Frog Battalion</span>
                 <span class="title-sub">Looking For SQB Members!</span>
@@ -343,160 +303,83 @@ footer{
             </p>
 
             <div class="hero-buttons">
-
-                <a href="#join" class="btn btn-primary">
-                    JOIN NOW
-                </a>
-
-                <a href="#gallery" class="btn btn-secondary">
-                    BATTLE GALLERY
-                </a>
-
-                 <a href="/index.html" class="btn btn-secondary">
-                    HOME
-                </a>
-
+                <a href="#join" class="btn btn-primary">JOIN NOW</a>
+                <a href="#gallery" class="btn btn-secondary">BATTLE GALLERY</a>
+                <a href="/index.html" class="btn btn-secondary">HOME</a>
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <div class="section">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                WHY JOIN 513th?
-            </h2>
-
-            <div class="card">
-                <li><span class="check">✔</span> <strong>Experienced Members:</strong> Learn and play alongside experienced players from SWE, YGGDRASIL, and other well-known squadrons.</li>
-                <li><span class="check">✔</span> <strong>English-Speaking Community:</strong> Everyone is welcome, regardless of nationality or experience level.</li>
-                <li><span class="check">✔</span> <strong>Coordinated SRE/SQB:</strong> Experience high-level tactical gameplay with a team that focuses on both results and camaraderie.</li>
-                <li><span class="check">✔</span> <strong>Teamwork First:</strong> Work together with dedicated teammates who value communication, coordination, and mutual support.</li>
-                <li><span class="check">✔</span> <strong>Brotherhood (and Memes):</strong> Our Discord is the heart of the battalion—a place for strategy and superior frog-tier humor.</li>
-                <li><span class="check">✔</span> <strong>Growing Community:</strong> Be part of a growing team that values loyalty, respect, and fun.</li>
-                <li><span class="check">✔</span> <strong>More Fun Together:</strong> 513th ARE Team is a place where gaming is simply more fun.</li>
-            </div>
-
         </div>
     </div>
 </section>
 
 <section class="section">
-
     <div class="container">
+        <h2 class="section-title">WHY JOIN 513th?</h2>
+        <div class="card">
+            <li><span class="check">✔</span> <strong>Experienced Members:</strong> Learn and play alongside experienced players from SWE, YGGDRASIL, and other well-known squadrons.</li>
+            <li><span class="check">✔</span> <strong>English-Speaking Community:</strong> Everyone is welcome, regardless of nationality or experience level.</li>
+            <li><span class="check">✔</span> <strong>Coordinated SRE/SQB:</strong> Experience high-level tactical gameplay with a team that focuses on both results and camaraderie.</li>
+            <li><span class="check">✔</span> <strong>Teamwork First:</strong> Work together with dedicated teammates who value communication, coordination, and mutual support.</li>
+            <li><span class="check">✔</span> <strong>Brotherhood (and Memes):</strong> Our Discord is the heart of the battalion—a place for strategy and superior frog-tier humor.</li>
+            <li><span class="check">✔</span> <strong>Growing Community:</strong> Be part of a growing team that values loyalty, respect, and fun.</li>
+            <li><span class="check">✔</span> <strong>More Fun Together:</strong> 513th ARE Team is a place where gaming is simply more fun.</li>
+        </div>
+    </div>
+</section>
 
-        <h2 class="section-title">
-            WHAT WE DEMAND 💀
-        </h2>
-
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">WHAT WE DEMAND 💀</h2>
         <div class="requirements-grid">
-
             <div class="card">
                 <div class="card-icon">🎖️</div>
                 <h3>LEVEL 100+</h3>
-                <p>
-                   Only the true nerds.
-                </p>
+                <p>Only the true nerds.</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">🎤</div>
                 <h3>WORKING MIC AND 17+</h3>
-                <p>
-                    English speaking
-                </p>
+                <p>English speaking</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">🗣️</div>
                 <h3>ENGLISH FLUENCY</h3>
-                <p>
-                    So we can scream strategies
-                    and victory cries properly.
-                </p>
+                <p>So we can scream strategies and victory cries properly.</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">⚔️</div>
                 <h3>RANK VII+ IN ANY NATION</h3>
-                <p>
-                    Ground Rank VII+ required.
-                    If applying as Air,
-                    Ground Rank VII+ is also required.
-                </p>
+                <p>Ground Rank VII+ required. If applying as Air, Ground Rank VII+ is also required.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <section id="gallery" class="section gallery">
-
     <div class="container">
-
-        <h2 class="section-title">
-            FROG BATTALION IN ACTION
-        </h2>
-
+        <h2 class="section-title">FROG BATTALION IN ACTION</h2>
         <div class="gallery-grid">
-
             <img src="/images/galleri1.png" class="logo-image">
             <img src="/images/galleri2.png">
             <img src="/images/galleri3.jpg">
             <img src="/images/galleri4.png">
-
         </div>
 
-    <div class="video-grid">
-        <iframe
-            src="https://www.youtube.com/embed/XE6qixDIY0w"
-            title="YouTube video player"
-            allowfullscreen>
-        </iframe>
-
-        <iframe
-            src="https://www.youtube.com/embed/dxraqtCYbHw"
-            title="YouTube video player"
-            allowfullscreen>
-        </iframe>
-
+        <div class="video-grid">
+            <iframe src="https://www.youtube.com/embed/XE6qixDIY0w" title="YouTube video player" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dxraqtCYbHw" title="YouTube video player" allowfullscreen></iframe>
+        </div>
     </div>
-
 </section>
 
 <section id="join" class="section join">
-
     <div class="container">
-
-        <h2>
-            READY TO GO TO WAR?
-        </h2>
-
-        <p>
-            Applications are open. Join the Discord,
-            meet the battalion and start your recruitment process today.
-        </p>
-
-        <a
-            href="https://discord.gg/513th"
-            class="join-button"
-            target="_blank">
-
-            JOIN THE BATTALION
-
-        </a>
-
+        <h2>READY TO GO TO WAR?</h2>
+        <p>Applications are open. Join the Discord, meet the battalion and start your recruitment process today.</p>
+        <a href="https://discord.gg/513th" class="join-button" target="_blank">JOIN THE BATTALION</a>
     </div>
-
 </section>
 
 <footer>
