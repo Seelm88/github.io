@@ -171,15 +171,21 @@
         .title-main {
             font-family: 'Montserrat', sans-serif;
             font-size: clamp(7.5rem, 9vw, 9rem);
-            font-weight: 900; /* Tvingar fram den fetaste vikten */
+            font-weight: 900;
             color: #ffd700;
-            letter-spacing: -0.05em; /* Drar ihop bokstäverna ordentligt */
+            letter-spacing: -0.05em;
             
-            /* Ger den perfekta, tjocka vita kantlinjen från SQB-bilden */
-            -webkit-text-stroke: 3px #fff; 
-            
-            /* Lägger en subtil glöd bakom den vita kanten */
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            /* Ersätt stroke med en skarp text-shadow som skapar konturen */
+            text-shadow: 
+                -3px -3px 0 #fff,  
+                3px -3px 0 #fff,
+                -3px  3px 0 #fff,
+                3px  3px 0 #fff,
+                0px -3px 0 #fff,
+                0px  3px 0 #fff,
+                -3px  0px 0 #fff,
+                3px  0px 0 #fff,
+                0 0 15px rgba(255, 215, 0, 0.3); /* Din original-glöd */
         }
 
         .title-sub {
@@ -189,9 +195,17 @@
             color: #ffd700;
             letter-spacing: -0.05em;
             
-            /* Samma tjocka kantlinje här */
-            -webkit-text-stroke: 3px #fff;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            /* Samma sak här */
+            text-shadow: 
+                -3px -3px 0 #fff,  
+                3px -3px 0 #fff,
+                -3px  3px 0 #fff,
+                3px  3px 0 #fff,
+                0px -3px 0 #fff,
+                0px  3px 0 #fff,
+                -3px  0px 0 #fff,
+                3px  0px 0 #fff,
+                0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .hero p {
